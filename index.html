@@ -29,35 +29,44 @@
             border-radius: 12px;
             padding: 20px;
             border: 1px solid rgba(255, 255, 255, 0.2);
+            max-width: 600px;
+            margin: auto;
         }
 
         .input-field {
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             color: var(--text-color);
             padding: 12px;
             border-radius: 6px;
+            width: 100%;
+            margin-bottom: 15px;
             transition: all 0.3s ease;
         }
 
         .input-field:focus {
-            background-color: rgba(255, 255, 255, 0.2);
+            background-color: rgba(255, 255, 255, 0.3);
             border-color: var(--primary-color);
             outline: none;
         }
 
         .btn-primary {
-            background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
-            border-radius: 8px;
+            background: linear-gradient(135deg, #ff7f41 10%, #00e1d8 90%);
+            border-radius: 10px;
             font-size: 18px;
-            padding: 14px 20px;
+            padding: 14px;
             font-weight: bold;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            width: 100%;
+            text-align: center;
+            cursor: pointer;
+            border: none;
+            color: var(--text-color);
         }
 
         .btn-primary:hover {
             transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
         .logo-container {
@@ -68,10 +77,28 @@
         .logo-container img {
             max-width: 150px;
         }
+
+        .select-field {
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            color: var(--text-color);
+            padding: 12px;
+            border-radius: 6px;
+            width: 100%;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .select-field:focus {
+            background-color: rgba(255, 255, 255, 0.3);
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
     </style>
 </head>
-<body class="min-h-screen flex justify-center items-center">
-    <div class="container mx-auto px-4 py-8 max-w-4xl">
+<body class="min-h-screen flex flex-col items-center justify-center">
+    <div class="container px-4 py-8 max-w-4xl">
         <!-- Logo -->
         <div class="logo-container">
             <img src="https://drive.google.com/uc?export=view&id=1f0XGvLc8WfQs4S0Fm5tjFXIOyz6Jbp8k" 
@@ -92,77 +119,54 @@
                 <input type="hidden" name="_next" value="https://lead2convert.com/obrigado.html">
                 
                 <div class="space-y-4">
-                    <!-- Nome -->
-                    <div>
-                        <label for="nome" class="block text-lg">Qual o seu nome?</label>
-                        <input type="text" id="nome" name="nome" required class="input-field w-full">
-                    </div>
-                    
-                    <!-- WhatsApp -->
-                    <div>
-                        <label for="whatsapp" class="block text-lg">Qual seu WhatsApp para entrarmos em contato?</label>
-                        <input type="tel" id="whatsapp" name="whatsapp" required class="input-field w-full">
-                    </div>
+                    <label>Qual o seu nome?</label>
+                    <input type="text" name="nome" required class="input-field">
 
-                    <!-- Vende Infoprodutos -->
-                    <div>
-                        <label class="block text-lg">Você já vende infoprodutos?</label>
-                        <select name="vende_infoprodutos" class="input-field w-full" required>
-                            <option value="Sim, faço lançamentos">Sim, faço lançamentos</option>
-                            <option value="Sim, vendo no perpétuo">Sim, vendo no perpétuo</option>
-                            <option value="Sim, mas não vendo bem">Sim, mas não vendo bem</option>
-                            <option value="Não, ainda não comecei">Não, ainda não comecei</option>
-                        </select>
-                    </div>
+                    <label>Qual seu WhatsApp para entrarmos em contato?</label>
+                    <input type="tel" name="whatsapp" required class="input-field">
 
-                    <!-- Ticket Médio -->
-                    <div>
-                        <label class="block text-lg">Qual o ticket médio do seu infoproduto?</label>
-                        <select name="ticket_medio" class="input-field w-full" required>
-                            <option value="Até R$497">Até R$497</option>
-                            <option value="Entre R$497 e R$997">Entre R$497 e R$997</option>
-                            <option value="Entre R$997 e R$2997">Entre R$997 e R$2997</option>
-                            <option value="Acima de R$2997">Acima de R$2997</option>
-                        </select>
-                    </div>
+                    <label>Você já vende infoprodutos?</label>
+                    <select name="vende_infoprodutos" class="select-field" required>
+                        <option value="Sim, faço lançamentos">Sim, faço lançamentos</option>
+                        <option value="Sim, vendo no perpétuo">Sim, vendo no perpétuo</option>
+                        <option value="Sim, mas não vendo bem">Sim, mas não vendo bem</option>
+                        <option value="Não, ainda não comecei">Não, ainda não comecei</option>
+                    </select>
 
-                    <!-- Leads por Mês -->
-                    <div>
-                        <label class="block text-lg">Quantos leads entram no seu funil por mês?</label>
-                        <select name="leads_funil" class="input-field w-full" required>
-                            <option value="Menos de 500">Menos de 500</option>
-                            <option value="Entre 500 e 2000">Entre 500 e 2000</option>
-                            <option value="Mais de 2000">Mais de 2000</option>
-                        </select>
-                    </div>
+                    <label>Qual o ticket médio do seu infoproduto?</label>
+                    <select name="ticket_medio" class="select-field" required>
+                        <option value="Até R$497">Até R$497</option>
+                        <option value="Entre R$497 e R$997">Entre R$497 e R$997</option>
+                        <option value="Entre R$997 e R$2997">Entre R$997 e R$2997</option>
+                        <option value="Acima de R$2997">Acima de R$2997</option>
+                    </select>
 
-                    <!-- Maior desafio -->
-                    <div>
-                        <label class="block text-lg">Qual é o seu maior desafio no fechamento de vendas?</label>
-                        <select name="maior_desafio" class="input-field w-full" required>
-                            <option value="Não tenho tempo para responder leads">Não tenho tempo para responder leads</option>
-                            <option value="Tenho muitos leads, mas converto poucos">Tenho muitos leads, mas converto poucos</option>
-                            <option value="Preciso de um processo mais profissional de vendas">Preciso de um processo mais profissional de vendas</option>
-                            <option value="Não sei como abordar os leads corretamente">Não sei como abordar os leads corretamente</option>
-                        </select>
-                    </div>
+                    <label>Quantos leads entram no seu funil por mês?</label>
+                    <select name="leads_funil" class="select-field" required>
+                        <option value="Menos de 500">Menos de 500</option>
+                        <option value="Entre 500 e 2000">Entre 500 e 2000</option>
+                        <option value="Mais de 2000">Mais de 2000</option>
+                    </select>
 
-                    <!-- Botão de Envio -->
-                    <div class="text-center pt-4">
-                        <button type="submit" class="btn-primary w-full">
-                            Quero aumentar minhas vendas!
-                        </button>
-                    </div>
+                    <label>Qual é o seu maior desafio no fechamento de vendas?</label>
+                    <select name="maior_desafio" class="select-field" required>
+                        <option value="Não tenho tempo para responder leads">Não tenho tempo para responder leads</option>
+                        <option value="Tenho muitos leads, mas converto poucos">Tenho muitos leads, mas converto poucos</option>
+                        <option value="Preciso de um processo mais profissional de vendas">Preciso de um processo mais profissional de vendas</option>
+                        <option value="Não sei como abordar os leads corretamente">Não sei como abordar os leads corretamente</option>
+                    </select>
+
+                    <button type="submit" class="btn-primary">
+                        Quero aumentar minhas vendas!
+                    </button>
                 </div>
             </form>
         </div>
-        
-        <!-- Mensagem Final -->
+
         <div class="text-center mt-6">
             <p class="text-sm">Obrigado por responder! Vamos analisar suas respostas e entraremos em contato pelo WhatsApp.</p>
         </div>
 
-        <!-- Rodapé -->
         <footer class="text-center text-gray-400 text-sm mt-12">
             <p>© 2025 Lead2Convert - Todos os direitos reservados</p>
         </footer>
