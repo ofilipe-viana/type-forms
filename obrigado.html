@@ -5,37 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Obrigado!</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            text-align: center;
-            font-family: Arial, sans-serif;
-            padding: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Centraliza verticalmente */
             background-color: #0c3b55;
             color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
         }
-        .message {
-            max-width: 500px;
-            margin: auto;
+
+        .message-container {
             background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
+            padding: 30px;
+            border-radius: 12px;
+            max-width: 500px;
+            width: 90%;
         }
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
-            background: linear-gradient(135deg, #ff7f41 10%, #00e1d8 90%);
-            text-decoration: none;
-            color: white;
-            border-radius: 8px;
+
+        h1 {
+            font-size: 24px;
             font-weight: bold;
+            margin-bottom: 10px;
         }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
     </style>
 </head>
 <body>
-    <div class="message">
+    <div class="message-container">
         <h1>Obrigado pelo seu cadastro!</h1>
         <p>Recebemos suas informações e entraremos em contato pelo WhatsApp em breve.</p>
-        <a href="https://lead2convert.com" class="btn">Voltar para o site</a>
     </div>
 </body>
 </html>
