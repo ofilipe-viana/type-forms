@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Obrigado!</title>
+    <title>Cadastro Efetuado</title>
     <style>
         * {
             margin: 0;
@@ -15,7 +15,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Centraliza verticalmente */
+            height: 100vh;
             background-color: #0c3b55;
             color: #ffffff;
             font-family: Arial, sans-serif;
@@ -39,14 +39,33 @@
         p {
             font-size: 18px;
             line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 20px;
+            background: linear-gradient(135deg, #ff7f41 10%, #00e1d8 90%);
+            text-decoration: none;
+            color: white;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
         }
 
     </style>
 </head>
 <body>
     <div class="message-container">
-        <h1>Obrigado pelo seu cadastro!</h1>
-        <p>Recebemos suas informações e entraremos em contato pelo WhatsApp em breve.</p>
+        <h1>Cadastro efetuado com sucesso!</h1>
+        <p>Logo entraremos em contato.</p>
+        <a href="https://www.instagram.com/ofilipeviana" class="btn">Voltar para o Instagram</a>
     </div>
 </body>
 </html>
