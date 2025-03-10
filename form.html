@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead2Convert - Diagnóstico Gratuito</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #00e1d8;
+            --secondary-color: #ff7f41;
+            --dark-blue: #0c3b55;
+            --text-color: #ffffff;
+        }
+        
+        body {
+            background-color: var(--dark-blue);
+            color: var(--text-color);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        h1, h2, p {
+            color: var(--text-color);
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .input-field {
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--text-color);
+            padding: 12px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+        }
+
+        .input-field:focus {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-color: var(--primary-color);
+            outline: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(90deg, var(--secondary-color) 0%, var(--primary-color) 100%);
+            border-radius: 8px;
+            font-size: 18px;
+            padding: 14px 20px;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            max-width: 150px;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex justify-center items-center">
+    <div class="container mx-auto px-4 py-8 max-w-4xl">
+        <!-- Logo -->
+        <div class="logo-container">
+            <img src="https://drive.google.com/uc?export=view&id=1f0XGvLc8WfQs4S0Fm5tjFXIOyz6Jbp8k" 
+                 alt="Lead2Convert">
+        </div>
+
+        <div class="text-center mb-8">
+            <h1 class="text-4xl font-bold mb-2">LEAD2CONVERT</h1>
+            <h2 class="text-2xl font-bold mb-6">🚀 Diagnóstico Gratuito</h2>
+            <p class="text-lg">Quer mais clientes? Eu fecho suas vendas. Receba seu diagnóstico gratuito agora!</p>
+        </div>
+        
+        <!-- Form Container -->
+        <div class="form-container">
+            <form id="leadForm" action="https://formsubmit.co/ofilipeviana@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="Novo Lead!">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="https://lead2convert.com/obrigado.html">
+                
+                <div class="space-y-4">
+                    <!-- Nome -->
+                    <div>
+                        <label for="nome" class="block text-lg">Qual o seu nome?</label>
+                        <input type="text" id="nome" name="nome" required class="input-field w-full">
+                    </div>
+                    
+                    <!-- WhatsApp -->
+                    <div>
+                        <label for="whatsapp" class="block text-lg">Qual seu WhatsApp para entrarmos em contato?</label>
+                        <input type="tel" id="whatsapp" name="whatsapp" required class="input-field w-full">
+                    </div>
+
+                    <!-- Vende Infoprodutos -->
+                    <div>
+                        <label class="block text-lg">Você já vende infoprodutos?</label>
+                        <select name="vende_infoprodutos" class="input-field w-full" required>
+                            <option value="Sim, faço lançamentos">Sim, faço lançamentos</option>
+                            <option value="Sim, vendo no perpétuo">Sim, vendo no perpétuo</option>
+                            <option value="Sim, mas não vendo bem">Sim, mas não vendo bem</option>
+                            <option value="Não, ainda não comecei">Não, ainda não comecei</option>
+                        </select>
+                    </div>
+
+                    <!-- Ticket Médio -->
+                    <div>
+                        <label class="block text-lg">Qual o ticket médio do seu infoproduto?</label>
+                        <select name="ticket_medio" class="input-field w-full" required>
+                            <option value="Até R$497">Até R$497</option>
+                            <option value="Entre R$497 e R$997">Entre R$497 e R$997</option>
+                            <option value="Entre R$997 e R$2997">Entre R$997 e R$2997</option>
+                            <option value="Acima de R$2997">Acima de R$2997</option>
+                        </select>
+                    </div>
+
+                    <!-- Leads por Mês -->
+                    <div>
+                        <label class="block text-lg">Quantos leads entram no seu funil por mês?</label>
+                        <select name="leads_funil" class="input-field w-full" required>
+                            <option value="Menos de 500">Menos de 500</option>
+                            <option value="Entre 500 e 2000">Entre 500 e 2000</option>
+                            <option value="Mais de 2000">Mais de 2000</option>
+                        </select>
+                    </div>
+
+                    <!-- Maior desafio -->
+                    <div>
+                        <label class="block text-lg">Qual é o seu maior desafio no fechamento de vendas?</label>
+                        <select name="maior_desafio" class="input-field w-full" required>
+                            <option value="Não tenho tempo para responder leads">Não tenho tempo para responder leads</option>
+                            <option value="Tenho muitos leads, mas converto poucos">Tenho muitos leads, mas converto poucos</option>
+                            <option value="Preciso de um processo mais profissional de vendas">Preciso de um processo mais profissional de vendas</option>
+                            <option value="Não sei como abordar os leads corretamente">Não sei como abordar os leads corretamente</option>
+                        </select>
+                    </div>
+
+                    <!-- Botão de Envio -->
+                    <div class="text-center pt-4">
+                        <button type="submit" class="btn-primary w-full">
+                            Quero aumentar minhas vendas!
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- Mensagem Final -->
+        <div class="text-center mt-6">
+            <p class="text-sm">Obrigado por responder! Vamos analisar suas respostas e entraremos em contato pelo WhatsApp.</p>
+        </div>
+
+        <!-- Rodapé -->
+        <footer class="text-center text-gray-400 text-sm mt-12">
+            <p>© 2025 Lead2Convert - Todos os direitos reservados</p>
+        </footer>
+    </div>
+</body>
+</html>
